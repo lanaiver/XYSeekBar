@@ -1,4 +1,9 @@
 # XYSeekBar
+![http://www.iyuyao.top/zb_users/upload/2017/03/6630082603280444749.png](http://www.iyuyao.top/zb_users/upload/2017/03/6630082603280444749.png) 
+<br><br>黑色就是整个控件布局<br/>
+![http://www.iyuyao.top/zb_users/upload/2017/03/6630228838326934923.png](http://www.iyuyao.top/zb_users/upload/2017/03/6630228838326934923.png) 
+<br><br>
+
 这是一个自定义的双向滑动条，通过onDraw()画出布局onTouchEvent()监听滑动实时更新布局<br>
 布局主要包括 2个圆形滑动块<br>
 2条不同背景颜色条<br>
