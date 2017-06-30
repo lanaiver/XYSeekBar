@@ -3,7 +3,9 @@
 布局主要包括 2个圆形滑动块、 2条不同背景颜色条、 2个Paint显示当前滑动百分比
 
 使用步骤跟自定义view一样
-把app项目中的SeekBarPressure类拷贝到项目中，xml中添加自定义布局，有需要把图片和背景条下载下，当然也可以通过shape自己画
+把app项目中的SeekBarPressure类拷贝到项目中，
+xml中添加自定义布局，有需要把图片和背景条下载下，
+当然也可以通过shape自己画
 
 经常有人问：
 比如希望刻度从0-200
@@ -11,18 +13,19 @@
 
 其实主要控制刻度的就下面几句代码
 
- mOffsetLow = formatInt(defaultScreenLow / 100 * (mDistance)) + mThumbWidth / 2;
- mOffsetHigh = formatInt(defaultScreenHigh / 100 * (mDistance)) + mThumbWidth / 2;
- //当前滑块刻度
- double progressLow = formatInt((mOffsetLow - mThumbWidth / 2) * 100 / mDistance);
- double progressHigh = formatInt((mOffsetHigh - mThumbWidth / 2) * 100 / mDistance);
- 如果希望刻度从0-200，把上面的100改成200就行 
- 如果希望刻度从18-55，
- mOffsetLow = formatInt(defaultScreenLow / （55-18） * (mDistance)) + mThumbWidth / 2;
- mOffsetHigh = formatInt(defaultScreenHigh / （55-18） * (mDistance)) + mThumbWidth / 2;
- //当前滑块刻度
- double progressLow = formatInt((mOffsetLow - mThumbWidth / 2) * （55-18） / mDistance) + 18;
- double progressHigh = formatInt((mOffsetHigh - mThumbWidth / 2) * （55-18） / mDistance) + 18;
+    mOffsetLow = formatInt(defaultScreenLow / 100 * (mDistance)) + mThumbWidth / 2;
+    mOffsetHigh = formatInt(defaultScreenHigh / 100 * (mDistance)) + mThumbWidth / 2;
+    //当前滑块刻度
+    double progressLow = formatInt((mOffsetLow - mThumbWidth / 2) * 100 / mDistance);
+    double progressHigh = formatInt((mOffsetHigh - mThumbWidth / 2) * 100 / mDistance);
+    //如果希望刻度从0-200，把上面的100改成200就行 
+ 
+     //如果希望刻度从18-55，
+     mOffsetLow = formatInt(defaultScreenLow / 100 * (mDistance)) + mThumbWidth / 2;
+     mOffsetHigh = formatInt(defaultScreenHigh / 100 * (mDistance)) + mThumbWidth / 2;
+     //当前滑块刻度
+     double progressLow = formatInt((mOffsetLow - mThumbWidth / 2) * 100 / mDistance);
+     double progressHigh = formatInt((mOffsetHigh - mThumbWidth / 2) * 100 / mDistance);
 
 
 最后注意一下：在xml中SeekbarPressure的父布局必须是LinearLayout
