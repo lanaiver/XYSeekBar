@@ -21,11 +21,11 @@ xml中添加自定义布局，有需要把图片和背景条下载下，
     //如果希望刻度从0-200，把上面的100改成200就行 
  
      //如果希望刻度从18-55，
-     mOffsetLow = formatInt(defaultScreenLow / 100 * (mDistance)) + mThumbWidth / 2;
-     mOffsetHigh = formatInt(defaultScreenHigh / 100 * (mDistance)) + mThumbWidth / 2;
+     mOffsetLow = formatInt(defaultScreenLow / (55-18) * (mDistance)) + mThumbWidth / 2;
+     mOffsetHigh = formatInt(defaultScreenHigh / (55-18) * (mDistance)) + mThumbWidth / 2;
      //当前滑块刻度
-     double progressLow = formatInt((mOffsetLow - mThumbWidth / 2) * 100 / mDistance);
-     double progressHigh = formatInt((mOffsetHigh - mThumbWidth / 2) * 100 / mDistance);
+     double progressLow = formatInt((mOffsetLow - mThumbWidth / 2) * (55-18) / mDistance) + 18;
+     double progressHigh = formatInt((mOffsetHigh - mThumbWidth / 2) * (55-18) / mDistance) + 18;
 
 
 最后注意一下：在xml中SeekbarPressure的父布局必须是LinearLayout
