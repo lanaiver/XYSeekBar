@@ -28,8 +28,8 @@ xml中添加自定义布局，有需要把图片和背景条下载下，
      double progressHigh = formatInt((mOffsetHigh - mThumbWidth / 2) * (55-18) / mDistance) + 18;
 
 
-最后注意一下：在xml中SeekbarPressure的父布局必须是LinearLayout
-请设置SeekbarPressure的宽为match_parent。宽高用父容器来限制。
+注意：
+xml中SeekbarPressure的父布局必须是LinearLayout,设置SeekbarPressure的宽为match_parent。宽高用父容器来限制。
 
 如果其他问题可QQ 332256483 滑动条
 http://www.iyuyao.top/index.php/post/34.html
